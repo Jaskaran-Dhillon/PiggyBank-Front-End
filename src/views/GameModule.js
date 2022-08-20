@@ -40,20 +40,20 @@ export default function Dashboard() {
   const [score, setScore] = useState();
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
-  // const fetchQuestions = async () => {
-  //   try {
-  //     const result = await moduleService.getQuestions(module);
-  //     setQuestions(result.questions);
-  //     setLoading(false);
-  //   } catch (e) {
-  //     console.warn("Failed to questions", e);
-  //     toast.error("Failed to fetch questions.");
-  //   }
-  // };
+  const fetchQuestions = async () => {
+    try {
+      const result = await moduleService.getQuestions(module);
+      setQuestions(result.questions);
+      setLoading(false);
+    } catch (e) {
+      console.warn("Failed to questions", e);
+      toast.error("Failed to fetch questions.");
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchQuestions();
-  // }, []);
+  useEffect(() => {
+    fetchQuestions();
+  }, []);
 
   const selectionPage = () => {
     return (
