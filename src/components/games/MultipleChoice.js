@@ -6,15 +6,8 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-//styles
-import styles from "assets/jss/dashboardStyle";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles(styles);
-
 export default function MultipleChoice(props) {
   const { data, getNextQuestion } = props;
-  const classes = useStyles();
 
   const handleRadioChange = (event) => {
     let coin = 0;

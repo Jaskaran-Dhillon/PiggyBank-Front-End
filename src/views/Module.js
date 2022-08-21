@@ -59,6 +59,7 @@ export default function Module() {
     } else {
       navigate("/dashboard");
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [module]);
 
   const renderGame = () => {

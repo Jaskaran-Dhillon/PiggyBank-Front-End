@@ -16,10 +16,7 @@ const dashboardStyle = (theme) => ({
     paddingLeft: "30px",
     paddingRight: "30px",
     borderRadius: "10px",
-    width: "35%",
-    [theme.breakpoints.down('md')]: {
-      width: "100%",
-    },
+    width: "100%"
   },
   title: {
     fontSize: "22px",
