@@ -9,3 +9,5 @@ Steps:\
 Steps:\
 1.) Connect repository to Heroku.\
 2.) Set env var `REACT_APP_BASE_URL`="The url of the backend hosted on Heroku."
+
+Test here: https://ht6-project-front-end.herokuapp.com/modules/savings
