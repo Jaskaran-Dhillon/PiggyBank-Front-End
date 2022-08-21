@@ -57,12 +57,19 @@ export default function LoginPage() {
                 alignItems: "center",
               }}
             >
-              <p className={classes.title}>APPNAME</p>
+              <p className={classes.title}>Sign Into Your Account</p>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <Box sx={{ mt: 1 }}>
                   <Controller
                     render={({ field }) => (
-                      <TextField {...field} label="Email Address" fullWidth autoComplete="email" sx={{ mb: "10px" }} />
+                      <TextField
+                        {...field}
+                        label="Email Address"
+                        fullWidth
+                        autoComplete="email"
+                        sx={{ mb: "10px" }}
+                        className={classes.input}
+                      />
                     )}
                     defaultValue=""
                     name="email"
@@ -77,6 +84,7 @@ export default function LoginPage() {
                         autoComplete="password"
                         type="password"
                         sx={{ mb: "10px" }}
+                        className={classes.input}
                       />
                     )}
                     defaultValue=""

@@ -1,56 +1,192 @@
-import React, { Fragment, useContext, useEffect, useState, useRef, useLayoutEffect } from "react";
-import { toast } from "react-toastify";
-import { isBlank } from "helpers";
-import { moduleService } from "services/module.service";
+import React, { Fragment } from "react";
+import piggybankicon from "assets/images/piggybankicon.png";
+import budget from "assets/images/budget.png";
+import locked from "assets/images/locked.png";
 
-//mui components
-import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import CircularProgress from "@mui/material/CircularProgress";
 import Grid from "@mui/material/Grid";
-import { IconButton } from "@mui/material";
-import Tooltip from "@mui/material/Tooltip";
-import InputAdornment from "@mui/material/InputAdornment";
-import FilledInput from "@mui/material/FilledInput";
-
-//icons
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import SendIcon from "@mui/icons-material/Send";
-import CircleIcon from "@mui/icons-material/Circle";
 
 //styles
 import styles from "assets/jss/dashboardStyle";
 import { makeStyles } from "@mui/styles";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
-  const [message, setMessage] = useState("");
-  const [languageOptions, setLanguageOptions] = useState(null);
-  const scrollRef = useRef();
   const classes = useStyles();
-  
-  // const fetchOptions = async () => {
-  //   try {
-  //   } catch (e) {
-  //     console.warn("Failed to fetch languages", e);
-  //     toast.error("Failed to fetch supported languages.");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchOptions();
-  // }, []);
+  const navigate = useNavigate();
 
   const selectionPage = () => {
     return (
       <Grid item xs={12} className={classes.card}>
-        <Grid container flexDirection="column">
-          <Grid item>
-            <h3 className={classes.instruction}>ooga booga</h3>
+        <Grid container flexDirection="column" alignItems="center">
+          <Grid item xs={4}>
+            <div
+              onClick={() => {
+                navigate("/modules/savings");
+              }}
+              style={{
+                backgroundColor: "#EBB145",
+                width: "fit-content",
+                cursor: "pointer",
+                borderRadius: "8px",
+                padding: "15px",
+              }}
+            >
+              <img src={piggybankicon} alt="pig0" style={{ height: "50px", width: "60px" }} />
+            </div>
+            <h3 className={classes.instruction}>Savings</h3>
+          </Grid>
+          <Grid item xs={12}>
+            <Grid container alignItems="baseline" >
+              <Grid item>
+                <div
+                  onClick={() => {
+                    navigate("/modules/investing");
+                  }}
+                  style={{
+                    backgroundColor: "#E0B19D",
+                    width: "fit-content",
+                    cursor: "pointer",
+                    borderRadius: "8px",
+                    padding: "15px",
+                    marginRight: "10px"
+                  }}
+                >
+                  <img src={budget} alt="pig0" style={{ height: "50px", width: "60px" }} />
+                </div>
+                <h3 className={classes.instruction}>Investing</h3>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "fit-content",
+                    borderRadius: "8px",
+                    padding: "15px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <img src={locked} alt="pig0" style={{ height: "50px", width: "60px" }} />
+                </div>
+                <h3 className={classes.instruction} style={{marginLeft: "20px"}}>Accounts</h3>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            <Grid container alignItems="baseline" >
+              <Grid item>
+                <div
+                  onClick={() => {
+                    navigate("/modules/investing");
+                  }}
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "fit-content",
+                    borderRadius: "8px",
+                    padding: "15px",
+                    marginRight: "10px"
+                  }}
+                >
+                  <img src={locked} alt="pig0" style={{ height: "50px", width: "60px" }} />
+                </div>
+                <h3 className={classes.instruction}>Finance</h3>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "fit-content",
+                    borderRadius: "8px",
+                    padding: "15px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <img src={locked} alt="pig0" style={{ height: "50px", width: "60px" }} />
+                </div>
+                <h3 className={classes.instruction} style={{marginLeft: "20px"}}>Retirement</h3>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "15px",
+                    height: "15px",
+                    borderRadius: "3px",
+                    marginLeft: "15px",
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    backgroundColor: "#D9D9D9",
+                    width: "fit-content",
+                    borderRadius: "8px",
+                    padding: "15px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <img src={locked} alt="pig0" style={{ height: "50px", width: "60px" }} />
+                </div>
+                <h3 className={classes.instruction} style={{marginLeft: "20px"}}>Crypto</h3>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

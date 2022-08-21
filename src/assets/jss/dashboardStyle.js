@@ -6,7 +6,7 @@ const dashboardStyle = (theme) => ({
     cursor: "pointer",
   },
   background: {
-    backgroundColor: "#faebd7",
+    backgroundColor: "white",
     minHeight: "93vh",
     minWidth: "100vw",
     paddingTop: "10%"
@@ -38,6 +38,7 @@ const dashboardStyle = (theme) => ({
   },
   instruction: {
     marginBottom: "25px",
+    textAlign: "center"
   },
   loader: {
     marginBottom: "10px",

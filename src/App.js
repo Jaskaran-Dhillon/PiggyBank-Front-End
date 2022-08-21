@@ -11,7 +11,7 @@ import LoginPage from "views/LoginPage";
 import SignupPage from "views/SignupPage";
 import Dashboard from "views/Dashboard";
 import Logout from "views/Logout";
-import GameModule from "views/GameModule";
+import Module from "views/Module";
 
 //styles
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -25,6 +25,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        {/* <Route
+          path="/"
+          element={
+            <RequireAuth>
+              <Header>
+                <Dashboard />
+              </Header>
+            </RequireAuth>
+          }
+        /> */}
         <Routes>
           <Route
             path="/dashboard"
@@ -41,7 +51,7 @@ function App() {
             element={
               <RequireAuth>
                 <Header>
-                  <GameModule />
+                  <Module />
                 </Header>
               </RequireAuth>
             }

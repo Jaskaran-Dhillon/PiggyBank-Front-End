@@ -2,7 +2,7 @@ import axios from "../axios";
 const domain = process.env.REACT_APP_API_URL;
 
 const getQuestions = async (module) => {
-  return await axios.get(`${domain}/${module}`);
+  return await axios.get(`${domain}/module/${module}`);
 };
 
 const updateModuleStatus = async ({ userId, module, coins }) => {

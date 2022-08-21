@@ -1,8 +1,8 @@
 const headerStyle = () => ({
   appBar:{
     "&.MuiAppBar-root" : {
-      color: "white",
-      backgroundColor: "#4a9acf"
+      color: "#E0B19D",
+      backgroundColor: "#FFFAF1"
     }
   }
 });

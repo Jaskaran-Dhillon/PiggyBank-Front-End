@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 //mui components
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -61,9 +60,8 @@ export default function SignupPage() {
                 alignItems: "center",
               }}
             >
-              <Avatar sx={{ m: 1, bgcolor: "#4a9acf" }}></Avatar>
-              <Typography component="h1" variant="h5">
-                Create an account
+              <Typography component="h1" variant="h5" style={{marginBottom: "25px", fontWeight: 800}}>
+                Create your profile
               </Typography>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <Box sx={{ mt: 1 }}>
@@ -100,6 +98,7 @@ export default function SignupPage() {
                         sx={{ mb: "10px" }}
                         error={!!errors.firstName}
                         helperText={errors.firstName?.message}
+                        className={classes.input}
                       />
                     )}
                     defaultValue=""
@@ -122,6 +121,7 @@ export default function SignupPage() {
                         sx={{ mb: "10px" }}
                         error={!!errors.lastName}
                         helperText={errors.lastName?.message}
+                        className={classes.input}
                       />
                     )}
                     defaultValue=""
@@ -146,6 +146,8 @@ export default function SignupPage() {
                         sx={{ mb: "10px" }}
                         error={!!errors.password}
                         helperText={errors.password?.message}
+                        className={classes.input}
+                        inputProps={{className: classes.input}}
                       />
                     )}
                     defaultValue=""
@@ -168,7 +170,7 @@ export default function SignupPage() {
                     sx={{ mt: 3, mb: 2 }}
                     className={classes.signupButton}
                   >
-                    Sign Up
+                    Create Account
                   </Button>
                   <Grid container justifyContent="flex-end">
                     <Grid item>
