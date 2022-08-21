@@ -6,7 +6,6 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-
 //styles
 import styles from "assets/jss/dashboardStyle";
 import { makeStyles } from "@mui/styles";
@@ -19,7 +18,7 @@ export default function MultipleChoice(props) {
 
   const handleRadioChange = (event) => {
     let coin = 0;
-    if (data.choices.findIndex((v) => v === event.target.value) === data.correctAnswer) {
+    if (event.target.value === data.correctAnswer) {
       coin = 1;
     }
     getNextQuestion(coin);

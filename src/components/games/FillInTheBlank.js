@@ -29,7 +29,7 @@ export default function FillInTheBlank(props) {
             <Button
               onClick={() => {
                 let coin = 0;
-                if (index === data.correctAnswer) {
+                if (label === data.correctAnswer) {
                   coin = 1;
                 }
                 getNextQuestion(coin);
