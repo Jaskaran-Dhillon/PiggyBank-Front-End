@@ -44,7 +44,7 @@ export default function Home() {
                 </Grid>
                 <Grid item xs={12}>
                   <p style={{ textAlign: "center", color: "#EBB145", fontWeight: 900, fontSize: "25px" }}>
-                    The easiest way to learn financial literacy at your fingetips!
+                    The easiest way to learn financial literacy at your fingertips!
                   </p>
                 </Grid>
                 <Grid item xs={12}>
