@@ -12,6 +12,7 @@ import SignupPage from "views/SignupPage";
 import Dashboard from "views/Dashboard";
 import Logout from "views/Logout";
 import Module from "views/Module";
+import Home from "views/Home";
 
 //styles
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -25,17 +26,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        {/* <Route
-          path="/"
-          element={
-            <RequireAuth>
-              <Header>
-                <Dashboard />
-              </Header>
-            </RequireAuth>
-          }
-        /> */}
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route
             path="/dashboard"
             element={

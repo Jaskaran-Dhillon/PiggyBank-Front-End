@@ -18,6 +18,13 @@ const dashboardStyle = (theme) => ({
     borderRadius: "10px",
     width: "100%"
   },
+  card2: {
+    background: "white",
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    borderRadius: "10px",
+    width: "40%"
+  },
   title: {
     fontSize: "22px",
     fontWeight: "700",
@@ -102,7 +109,7 @@ const dashboardStyle = (theme) => ({
   circleIcon: {
     color: "#08dd08",
     transform: "scale(0.5)",
-  },
+  }
 });
 
 export default dashboardStyle;

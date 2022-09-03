@@ -80,7 +80,7 @@ export default function Module() {
       return <CircularProgress />
     } else if (currentQuestion === questions?.length) {
       return (
-        <Grid item xs={12} className={classes.card}>
+        <Grid item xs={12} className={classes.card2}>
           <Grid container flexDirection="column">
             <Grid item>
               <p
@@ -97,7 +97,7 @@ export default function Module() {
             <Grid item>
               <p
                 style={{ textAlign: "center", color: "#EBB145", fontWeight: 900, fontSize: "25px" }}
-              >{`You answered ${coins} out of ${questions.length} correctly!`}</p>
+              >{`You answered ${coins} out of ${questions.length} questions correctly!`}</p>
             </Grid>
             <Button
               style={{
@@ -118,7 +118,7 @@ export default function Module() {
       );
     } else {
       return (
-        <Grid item xs={12} className={classes.card}>
+        <Grid item xs={12} className={classes.card2}>
           <Grid container flexDirection="column">
             <Grid item style={{ display: "flex" }}>
               <span style={{ flexGrow: 1 }}>{`Question ${currentQuestion + 1}/${questions?.length}`}</span>

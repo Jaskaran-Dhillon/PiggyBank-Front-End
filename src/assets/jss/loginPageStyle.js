@@ -5,8 +5,12 @@ const loginPageStyle = () => ({
     textDecoration: "underline",
     cursor: "pointer",
   },
+  background2: {
+    paddingTop: "10%",
+    minHeight: "100vh",
+    minWidth: "100vw",
+  },
   background: {
-    //backgroundColor: "#faebd7",
     minHeight: "100vh",
     minWidth: "100vw",
   },
@@ -61,6 +65,12 @@ const loginPageStyle = () => ({
     },
     "& .MuiFormLabel-root":{
       color: "#E0B19D"
+    }
+  },
+  appBar:{
+    "&.MuiAppBar-root" : {
+      color: "#E0B19D",
+      backgroundColor: "white"
     }
   }
 });
