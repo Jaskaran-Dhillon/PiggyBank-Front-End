@@ -1,11 +1,5 @@
 import axios from "axios";
 
-//const authToken = JSON.parse(localStorage.getItem("user"))?.token;
-
-const instance = axios.create({
-  // headers: {
-  //   Authorization: `Bearer ${authToken}`
-  // },
-});
+const instance = axios.create();
 
 export default instance;
