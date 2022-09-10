@@ -14,5 +14,5 @@ Steps:\
 1.) Connect repository to hosting service.\
 2.) Set env var `REACT_APP_API_URL`=The url of the backend service.
 
-### Application: https://piggy-bank-front-end.vercel.app/
+### Application: https://piggy-bank-ht6.vercel.app/
 ### Devpost: https://devpost.com/software/financial-literacy-1t29v3
